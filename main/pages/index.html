@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/maincss.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Phần mềm quản lý nhà hàng MISA-CUKCUK</title>
+</head>
+
+<body>
+    <div id="app">
+        <div id="header">
+            <div class="header-left">
+                <div class="toggle"></div>
+                <div class="logo"></div>
+            </div>
+            <div class="header-right">
+                <div class="restaurant">
+                    <div class="restaurant-name">
+                        Nha hang Bien Dong
+                    </div>
+                    <i class="fas fa-chevron-down restaurant__icon"></i>
+                    <ul class="restaurant__dropdown"></ul>
+                </div>
+                <div class="account">
+                    <div class="account_image"></div>
+                    <div class="account_name">Le Duc Tung</div>
+                    <div class="account_icon"></div>
+                </div>
+            </div>
+        </div>
+        <div style="display: flex">
+            <div id="menu">
+                <ul class="menu__list">
+                    <li class="menu__item menu__item--focus">
+                        <div class="menu__item-icon"></div>
+                        Tổng quan
+                    </li>
+                    <li class="menu__item">
+                        <div class="menu__item-icon"></div>
+                        Báo cáo
+                    </li>
+                    <li class="menu__item">
+                        <div class="menu__item-icon"></div>
+                        Mua hàng
+                    </li>
+                    <li class="menu__item">
+                        <div class="menu__item-icon"></div>
+                        Danh mục nhân viên
+                    </li>
+                    <li class="menu__item">
+                        <div class="menu__item-icon"></div>
+                        Thiết lập hệ thống
+                    </li>
+                </ul>
+            </div>
+            <div id="list">
+                <div class="top-of-list">
+                    <h1>Danh sach nhan vien</h1> 
+                    <div class="button add-att">
+                        <div class="add-mems-icon"></div>
+                        <p>Them nhan vien</p>
+                    </div>
+                </div>
+                <div class="search">
+                    <div class="search_places">
+                        <input class="search_places__code" placeholder="Tìm kiếm theo Mã, Tên hoặc Số Điện Thoại">
+                            
+
+                        
+                        <div class="search_places__department"></div>
+                        <div class="search_places__position"></div>
+                    </div>
+                    <div class="refresh"></div>
+                </div>
+            </div>
+        </div>
+       
+        <div id="footer"></div>
+    </div>
+</body>
+
+</html>
