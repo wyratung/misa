@@ -1,0 +1,47 @@
+#footer{
+    height: 56px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.footer-button{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.footer-page{
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    
+    background-color: #e5e5e5;
+    text-align: center;
+    margin: 8px;
+    cursor: pointer;
+}
+
+.footer-page:hover{
+    background-color: #fff;
+}
+
+/* .footer-page:focus{
+    background-color:#01B075 ;
+} */
+
+.page-number-color{
+    background-color:#01B075
+}
+.page-number{
+    height: 100%;    
+    line-height: 15px;
+    margin: 0px;
+    margin-top: 30%;
+}
+
+.footer-button{
+    margin: 8px;
+}
