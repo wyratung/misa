@@ -131,24 +131,22 @@ table thead {
 
 table tbody {
     height: 680px;
-    width: calc(100vh-200px);
+    width: 100%;
     display: block;
     table-layout: auto;
     overflow-y: scroll;
 }
 
-td,
+td {
+    border-collapse: collapse;
+    height: 40px;
+    white-space: nowrap;
+    width: 10%;
+}
+
 th {
     text-align: left;
-    padding: 8px;
-}
-
-td {
-    width: 220px;
-}
-
-th {
-    width: auto;
+    width: 10%;
 }
 
 tr:nth-child(even) {
