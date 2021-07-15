@@ -6,9 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/maincss.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
     <title>Phần mềm quản lý nhà hàng MISA-CUKCUK</title>
 </head>
 
@@ -69,7 +68,7 @@
                 </div>
                 <div class="search">
                     <div class="search_places">
-                        <input class="search_places__code" placeholder="Tìm kiếm theo Mã, Tên hoặc Số Điện Thoại">
+                        <input class="search_places__code" type="text" placeholder="Tìm kiếm theo Mã, Tên hoặc Số Điện Thoại">
                         <div class="search_places__department">
                             <div class="search_places__department_text">
                                 Tất cả phòng ban
@@ -408,7 +407,122 @@
                 </div>
             </div>
         </div>
+        <div class="dialog-modal"></div>
+        <div class="employee-profile-dialog">
+            <div class="dialog-header">
+                <p>THÔNG TIN NHÂN VIÊN</p>
+                <button class="btn-exit"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="dialog-content">
+                <div class="dialog-content-left">
+                    <div class="avt-default"></div>
+                    <p>(Vui lòng chọn ảnh có định dạng .jpg. .jpec. .png. .gif.)</p>
+                </div>
+                <div class="dialog-content-right">
+                    <div class="common-infor">
+                        <div class="title-info">
+                            <p>A. THÔNG TIN CHUNG</p>
+                            <div class="layout"></div>
+                        </div>
+                        <div class="my-row">
+                            <div class="small-info">
+                                <p>Mã nhân viên (<span class="red-symbol">*</span>)</p>
+                                <input type="text" class="border-input" value="NV000999" />
+                            </div>
+                            <div class="small-info">
+                                <p>Họ và tên (<span class="red-symbol">*</span>)</p>
+                                <input type="text" class="border-input" value="Nguyễn Văn Mạnh" />
+                            </div>
+                        </div>
+                        <div class="my-row">
+                            <div class="small-info">
+                                <p>Ngày sinh</p>
+                                <input class="calender border-input" type="date" value="11/01/1989" />
+                            </div>
+                            <div class="small-info">
+                                <p>Giới tính</p>
+                                <select name="" id="" class="border-input select-sex">
+                                    <option value="">Nam</option>
+                                    <option value="">Nữ</option>
+                                    <option value="">...</option>
+                                </select>
+                                <!-- <input class="down1 border-input" type="" value="Nam" /> -->
+                            </div>
+                        </div>
+                        <div class="my-row">
+                            <div class="small-info">
+                                <p>Số CMND/Căn cước (<span class="red-symbol">*</span>)</p>
+                                <input type="text" class="border-input" value="124141243" />
+                            </div>
+                            <div class="small-info">
+                                <p>Ngày cấp</p>
+                                <input class="calender border-input" type="date" value="11/04/2011" />
+                            </div>
+                        </div>
+                        <div class="my-row">
+                            <div class="small-info">
+                                <p>Nơi cấp</p>
+                                <input type="text" class="border-input" value="Tỉnh Bắc Giang" />
+                            </div>
+                        </div>
+                        <div class="my-row">
+                            <div class="small-info">
+                                <p>Email (<span class="red-symbol">*</span>)</p>
+                                <input type="text" class="border-input" value="manhnv@gmail.com" />
+                            </div>
+                            <div class="small-info">
+                                <p>Số điện thoại (<span class="red-symbol">*</span>)</p>
+                                <input type="text" class="border-input" value="0987635421" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="work-infor">
+                        <div class="title-info">
+                            <p>B. THÔNG TIN CÔNG VIỆC</p>
+                            <div class="layout"></div>
+                        </div>
+                        <div class="my-row">
+                            <div class="small-info">
+                                <p>Vị trí</p>
+                                <input class="down1 border-input" type="text" value="Giám đốc" />
+                            </div>
+                            <div class="small-info">
+                                <p>Phòng ban</p>
+                                <input class="down1 border-input" type="text" value="Phòng quản trị" />
+                            </div>
+                        </div>
+                        <div class="my-row">
+                            <div class="small-info">
+                                <p>Mã số thuế cá nhân</p>
+                                <input type="text" class="border-input" value="3454643543" />
+                            </div>
+                            <div class="small-info">
+                                <p>Mức lương cơ bản</p>
+                                <input class="can-phai border-input" type="text" value="30.000.000" />
+                            </div>
+                        </div>
+                        <div class="my-row">
+                            <div class="small-info">
+                                <p>Ngày gia nhập công ty</p>
+                                <input class="calender border-input" type="text" value="12/05/2015" />
+                            </div>
+                            <div class="small-info">
+                                <p>Tình trạng công việc</p>
+                                <input class="down1 border-input" type="text" value="Đang làm việc" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
+            <div class="dialog-footer">
+                <button class="btn-cancel"><b>Hủy</b></button>
+                <button class="button button-icon btn-save">
+                    <i class="fas fa-save"></i>
+                    <p>Lưu</p>
+                </button>
+            </div>
+        </div>
 
     </div>
 </body>

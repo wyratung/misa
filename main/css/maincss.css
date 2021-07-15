@@ -4,23 +4,26 @@
 @import url("./layout/menu.css");
 @import url("./layout/content.css");
 @import url("./layout/footer.css");
+@import url("./layout/dialog.css");
 body {
-    font-family: MISAGoogleSan;
+    margin: 0;
+    padding: 0;
+    font-family: MISAGoogleSans-Regular;
     font-size: 13px;
     background-color: var(--primary-color);
 }
 
 @font-face {
-    font-family: MISAGoogleSan;
-    src: url('../content/font/GoogleSans-Regular.otf');
+    font-family: MISAGoogleSans-Regular;
+    src: url('../../Resource/font/GoogleSans-Regular.otf');
 }
 
 @font-face {
     font-family: MISAGoogleSan-Bold;
-    src: url('../content/font/GoogleSans-Bold.otf');
+    src: url('../../Resource/font/GoogleSans-Bold.otf');
 }
 
 @font-face {
     font-family: MISAGoogleSan-Italic;
-    src: url('../content/font/GoogleSans-Italic.otf');
+    src: url('../../Resource/font/GoogleSans-Italic.otf');
 }
