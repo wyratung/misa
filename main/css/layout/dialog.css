@@ -4,9 +4,10 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: black;
-    opacity: 0.5;
-    z-index: 999;
+    /* background-color: black; */
+    /* opacity: 0.5; */
+    background: rgba(0,0,0,0.6);
+    display: none;
 }
 
 .employee-profile-dialog {
@@ -140,6 +141,7 @@
     height: 100%;
     background-color: #ffffff;
     float: left;
+    margin-right: 10px;
 }
 
 .employee-profile-dialog .dialog-content .dialog-content-right .small-info p {
@@ -204,5 +206,5 @@
 }
 
 .select-sex {
-    width: 100%;
+    width: 290px;
 }

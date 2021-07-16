@@ -4,8 +4,13 @@
     --primary-color: #fff99;
     --border-color: #ccc;
 }
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+.align-item-money {
+    text-align: end;
 }

@@ -2,6 +2,7 @@
     width: var(--menu-width);
     height: calc(100vh - 47px);
     border-right: 1px solid var(--border-color);
+    flex-shrink: 0;
 }
 
 
