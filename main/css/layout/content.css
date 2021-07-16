@@ -121,20 +121,24 @@
 table {
     border-collapse: collapse;
     width: 100%;
+    table-layout: auto;
+    display: block;
+    height: calc(680px + 34px);
+    overflow-y: scroll;
 }
 
 table thead {
     display: table;
     width: 100%;
-    table-layout: fixed;
+    position: sticky;
+    top: 0;
 }
 
 table tbody {
-    height: 680px;
-    width: 100%;
-    display: block;
-    table-layout: auto;
-    overflow-y: scroll;
+    max-height: 680px;
+    width: calc(100vw - 226px);
+    display: table;
+    overflow-y: hidden;
 }
 
 td {
