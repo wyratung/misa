@@ -37,6 +37,13 @@
     align-items: center;
 }
 
+
+.header-right-restaurant{
+    font-size: 14px;
+    font-weight: bold;
+    width: 200px;
+    margin-left: 12px;
+}
 .restaurant{
     height: 30px;
     line-height: 30px;
@@ -100,6 +107,11 @@
    height: 100%;
    /* line-height: 47px; */
 
+}
+
+.account_name{
+    font-size: 14px;
+    font-weight: bold;
 }
 
 .account_icon{

@@ -57,15 +57,11 @@
 }
 
 .search_places__department {
-    height: 40px;
-    width: 150px;
-    display: flex;
-    align-items: center;
-    border: 1px solid #BBBBBB;
-    justify-content: space-between;
-    border-radius: 4px;
     margin-left: 8px;
     cursor: pointer;
+    box-sizing: border-box;
+    font-weight: normal ;
+    width: 200px;
 }
 
 .search_places__department_text {
@@ -77,15 +73,9 @@
 }
 
 .search_places__position {
-    height: 40px;
+    font-weight: normal;
+    margin-left: 8px;
     width: 150px;
-    display: flex;
-    align-items: center;
-    border: 1px solid #BBBBBB;
-    justify-content: space-between;
-    border-radius: 4px;
-    margin-left: 16px;
-    cursor: pointer;
 }
 
 .refresh {
