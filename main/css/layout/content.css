@@ -4,6 +4,7 @@
     margin: 12px;
     display: block;
     background-color: #E9EBEE;
+    user-select: none;
 }
 
 .top-of-list {
@@ -18,6 +19,14 @@
     align-items: center;
 }
 
+.wrapper-btn{
+    display: flex;
+}
+
+.del-att{
+    line-height:40px ;
+    margin-right: 8px;
+}
 .add-mems-icon {
     background-image: url('../../../Resource/icon/add.png');
     height: 18px;
@@ -72,10 +81,22 @@
     margin-left: 16px;
 }
 
+.search_places__department .dropdown-header-wrapper i{
+    border-left: 1px solid #BBBBBB;
+    line-height: 40px;
+    padding-left: 12px;
+}
+
 .search_places__position {
     font-weight: normal;
     margin-left: 8px;
     width: 150px;
+}
+
+.search_places__position .dropdown-header-wrapper i{
+    border-left: 1px solid #BBBBBB;
+    line-height: 40px;
+    padding-left: 12px;
 }
 
 .refresh {
@@ -87,6 +108,11 @@
     display: flex;
     justify-content: center;
     cursor: pointer;
+    background-color: #fff;
+}
+
+.refresh:hover{
+    background-color: #BBB ;
 }
 
 .refresh-icon {

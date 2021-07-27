@@ -1,10 +1,10 @@
 var tbody = document.querySelector("tbody");
 var dialog = document.querySelector(".dialog-modal")
 var btnExit = document.querySelector('.btn-exit');
+var btnAdd =document.querySelector('.add-att');
 
-tbody.onclick = function () {
-    dialog.style.display = "block"
-}
+
+
 btnExit.addEventListener('click', () => {
     console.log('m bam exit');
     dialog.style.display = 'none';
@@ -27,6 +27,27 @@ var dropdownValue5 =document.querySelector(".dropdown-value-5");
 
 var state=false;
 var currVal=0;
+var dropdownPos=[
+    
+]
+
+var dropdownPos2=[
+    
+]
+$.ajax({
+    url: 'http://cukcuk.manhnv.net/v1/Positions',
+    method: 'GET',
+    async :false
+
+}).done(function(res){
+    res.forEach(position=>{
+        
+        dropdownPos.push(position.PositionName);
+        dropdownPos2.push(position.PositionName);
+    })
+}).fail(function(res){
+    console.log('ga vl');
+})
 
 
 var dropdownRestaurant=[
@@ -42,17 +63,7 @@ var dropdownDepartment=[
     'Phòng tài chính'
 ]
 
-var dropdownPos=[
-    'Vị trí',
-    'Giám đốc',
-    'Nhân viên'
-]
 
-var dropdownPos2=[
-    'Trưởng phòng',
-    'Giám đốc',
-    'Nhân viên'
-]
 
 var dropdownDepartment2=[
     'Phòng nhân sự',
@@ -65,6 +76,8 @@ var dropdownStatus=[
     'Nghỉ phép',
     'Đã thôi việc'
 ]
+
+
 
 function renderDropdown(dropdownValue, dropdownList, dropdownData) {
 
@@ -94,6 +107,7 @@ function renderDropdown(dropdownValue, dropdownList, dropdownData) {
                 render();
             });
         });
+
     }
 }
 
@@ -103,17 +117,50 @@ renderDropdown(dropdownValue2,dropdownList2,dropdownPos);
 renderDropdown(dropdownValue3,dropdownList3,dropdownPos2);
 renderDropdown(dropdownValue4,dropdownList4,dropdownDepartment2);
 renderDropdown(dropdownValue5,dropdownList5,dropdownStatus);
+
 var dropdowns = document.querySelectorAll(".dropdown");
+var dropshowLists=document.querySelectorAll(".search_places__department");
 
-
-dropdowns.forEach((dropdown) => {
-    dropdown.addEventListener('click', function () {
-        dropdown.querySelector('.dropdown-list').classList.add('dropdown-list-active');
-        dropdown.querySelector('.dropdown-list').classList.toggle('show');
-        dropdown.querySelector('.icon-up').classList.toggle('show');
-        dropdown.querySelector('.icon-down').classList.toggle('show');
+function render1(){
+    
+    // dropshowLists.forEach((dropshowList)=>{
+    //     dropshowList.addEventListener('blur',function(){
+    //         dropdown.querySelector('.dropdown-list').classList.toggle('show');
+    //         console.log(1);
+    //     })
+    // });
+    
+    dropdowns.forEach((dropdown) => {
+        dropdown.addEventListener('click', function () {
+            dropdown.querySelector('.dropdown-list').classList.add('dropdown-list-active');
+            dropdown.querySelector('.dropdown-list').classList.toggle('show');
+            dropdown.querySelector('.icon-up').classList.toggle('show');
+            dropdown.querySelector('.icon-down').classList.toggle('show');
+        });
+        dropdown.addEventListener('blur',function(){
+            alert(1);
+        });
     });
-});
+    // render();
+}
+ render1();
+
+ 
+
+// console.log( $('.employee-profile-dialog')[0])
+// $(document).ready(function(){
+//     var xs=$('.dropdown');
+//     xs.array.forEach(x=> {
+//         x.blur(function(){
+//             alert(1);
+//         })
+//     });
+    
+// })
+
+
+
+
 
 // while(1){
 //     var eixtdropdown=document.querySelector('.dropdown-list.dropdown-list-active');
@@ -125,6 +172,7 @@ dropdowns.forEach((dropdown) => {
 //     eixtdropdown.querySelector('.dropdown-list').classList.toggle('show');
 // })
 // }
+
 
 
 

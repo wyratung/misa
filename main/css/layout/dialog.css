@@ -31,6 +31,7 @@
     width: 100%;
     float: left;
     position: relative;
+    user-select: none;
 }
 
 .employee-profile-dialog .dialog-header p {
@@ -193,6 +194,9 @@
     background-color: #E9EBEE;
     cursor: pointer;
     outline: none;
+    border-radius: 6px;
+    border: 1px solid #BBB;
+    
 }
 
 .red-symbol {

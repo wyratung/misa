@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../css/maincss.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer"
     />
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script> 
     <title>Phần mềm quản lý nhà hàng MISA-CUKCUK</title>
 </head>
 
@@ -64,9 +65,12 @@
             <div id="list">
                 <div class="top-of-list">
                     <h1>Danh sách nhân viên</h1>
-                    <div class="button add-att">
-                        <div class="add-mems-icon"></div>
-                        <p>Thêm nhân viên</p>
+                    <div class='wrapper-btn'>
+                        <div class="button del-att">Xóa</div>
+                        <div class="button add-att">
+                            <div class="add-mems-icon"></div>
+                            <p>Thêm nhân viên</p>
+                        </div>
                     </div>
                 </div>
                 <div class="search">
@@ -93,14 +97,15 @@
                             </div>
                         </div>
                     </div>
-                    <div class="refresh">
+                    <div class="refresh" id="refresh">
                         <div class="refresh-icon"></div>
                     </div>
                 </div>
-                <div class="grid">
+                <div class="grid" id="grid">
                     <table>
                         <thead>
                             <tr class="employees-title">
+                                <th></th>
                                 <th>Mã nhân viên</th>
                                 <th>Họ và tên</th>
                                 <th>Giới tính</th>
@@ -114,224 +119,8 @@
                             </tr>
                         </thead>
 
-                        <tbody>
-                            <tr>
-                                <td>MF930</td>
-                                <td>Nguyễn Trung Dũng</td>
-                                <td>Nam</td>
-                                <td>31/4/1999</td>
-                                <td>03912323123</td>
-                                <td>tungdung123@gmail.com</td>
-                                <td>Giám đốc</td>
-                                <td>Phòng Nhân sự</td>
-                                <td class="align-item-money">17.000.000</td>
-                                <td>Đang thử việc</td>
-                            </tr>
-                            <tr>
-                                <td>MF930</td>
-                                <td>Nguyễn Trung Dũng</td>
-                                <td>Nam</td>
-                                <td>31/4/1999</td>
-                                <td>03912323123</td>
-                                <td>tungdung123@gmail.com</td>
-                                <td>Giám đốc</td>
-                                <td>Phòng Nhân sự</td>
-                                <td class="align-item-money">17.000.000</td>
-                                <td>Đang thử việc</td>
-                            </tr>
-                            <tr>
-                                <td>MF930</td>
-                                <td>Nguyễn Trung Dũng</td>
-                                <td>Nam</td>
-                                <td>31/4/1999</td>
-                                <td>03912323123</td>
-                                <td>tungdung123@gmail.com</td>
-                                <td>Giám đốc</td>
-                                <td>Phòng Nhân sự</td>
-                                <td class="align-item-money">17.000.000</td>
-                                <td>Đang thử việc</td>
-                            </tr>
-                            <tr>
-                                <td>MF930</td>
-                                <td>Nguyễn Trung Dũng</td>
-                                <td>Nam</td>
-                                <td>31/4/1999</td>
-                                <td>03912323123</td>
-                                <td>tungdung123@gmail.com</td>
-                                <td>Giám đốc</td>
-                                <td>Phòng Nhân sự</td>
-                                <td class="align-item-money">17.000.000</td>
-                                <td>Đang thử việc</td>
-                            </tr>
-                            <tr>
-                                <td>MF930</td>
-                                <td>Nguyễn Trung Dũng</td>
-                                <td>Nam</td>
-                                <td>31/4/1999</td>
-                                <td>03912323123</td>
-                                <td>tungdung123@gmail.com</td>
-                                <td>Giám đốc</td>
-                                <td>Phòng Nhân sự</td>
-                                <td class="align-item-money">17.000.000</td>
-                                <td>Đang thử việc</td>
-                            </tr>
-                            <tr>
-                                <td>MF930</td>
-                                <td>Nguyễn Trung Dũng</td>
-                                <td>Nam</td>
-                                <td>31/4/1999</td>
-                                <td>03912323123</td>
-                                <td>tungdung123@gmail.com</td>
-                                <td>Giám đốc</td>
-                                <td>Phòng Nhân sự</td>
-                                <td class="align-item-money">17.000.000</td>
-                                <td>Đang thử việc</td>
-                            </tr>
-                            <tr>
-                                <td>MF930</td>
-                                <td>Nguyễn Trung Dũng</td>
-                                <td>Nam</td>
-                                <td>31/4/1999</td>
-                                <td>03912323123</td>
-                                <td>tungdung123@gmail.com</td>
-                                <td>Giám đốc</td>
-                                <td>Phòng Nhân sự</td>
-                                <td class="align-item-money">17.000.000</td>
-                                <td>Đang thử việc</td>
-                            </tr>
-                            <tr>
-                                <td>MF930</td>
-                                <td>Nguyễn Trung Dũng</td>
-                                <td>Nam</td>
-                                <td>31/4/1999</td>
-                                <td>03912323123</td>
-                                <td>tungdung123@gmail.com</td>
-                                <td>Giám đốc</td>
-                                <td>Phòng Nhân sự</td>
-                                <td class="align-item-money">17.000.000</td>
-                                <td>Đang thử việc</td>
-                            </tr>
-                            <tr>
-                                <td>MF930</td>
-                                <td>Nguyễn Trung Dũng</td>
-                                <td>Nam</td>
-                                <td>31/4/1999</td>
-                                <td>03912323123</td>
-                                <td>tungdung123@gmail.com</td>
-                                <td>Giám đốc</td>
-                                <td>Phòng Nhân sự</td>
-                                <td class="align-item-money">17.000.000</td>
-                                <td>Đang thử việc</td>
-                            </tr>
-                            <tr>
-                                <td>MF930</td>
-                                <td>Nguyễn Trung Dũng</td>
-                                <td>Nam</td>
-                                <td>31/4/1999</td>
-                                <td>03912323123</td>
-                                <td>tungdung123@gmail.com</td>
-                                <td>Giám đốc</td>
-                                <td>Phòng Nhân sự</td>
-                                <td class="align-item-money">17.000.000</td>
-                                <td>Đang thử việc</td>
-                            </tr>
-                            <tr>
-                                <td>MF930</td>
-                                <td>Nguyễn Trung Dũng</td>
-                                <td>Nam</td>
-                                <td>31/4/1999</td>
-                                <td>03912323123</td>
-                                <td>tungdung123@gmail.com</td>
-                                <td>Giám đốc</td>
-                                <td>Phòng Nhân sự</td>
-                                <td class="align-item-money">17.000.000</td>
-                                <td>Đang thử việc</td>
-                            </tr>
-                            <tr>
-                                <td>MF930</td>
-                                <td>Nguyễn Trung Dũng</td>
-                                <td>Nam</td>
-                                <td>31/4/1999</td>
-                                <td>03912323123</td>
-                                <td>tungdung123@gmail.com</td>
-                                <td>Giám đốc</td>
-                                <td>Phòng Nhân sự</td>
-                                <td class="align-item-money">17.000.000</td>
-                                <td>Đang thử việc</td>
-                            </tr>
-                            <tr>
-                                <td>MF930</td>
-                                <td>Nguyễn Trung Dũng</td>
-                                <td>Nam</td>
-                                <td>31/4/1999</td>
-                                <td>03912323123</td>
-                                <td>tungdung123@gmail.com</td>
-                                <td>Giám đốc</td>
-                                <td>Phòng Nhân sự</td>
-                                <td class="align-item-money">17.000.000</td>
-                                <td>Đang thử việc</td>
-                            </tr>
-                            <tr>
-                                <td>MF930</td>
-                                <td>Nguyễn Trung Dũng</td>
-                                <td>Nam</td>
-                                <td>31/4/1999</td>
-                                <td>03912323123</td>
-                                <td>tungdung123@gmail.com</td>
-                                <td>Giám đốc</td>
-                                <td>Phòng Nhân sự</td>
-                                <td class="align-item-money">17.000.000</td>
-                                <td>Đang thử việc</td>
-                            </tr>
-                            <tr>
-                                <td>MF930</td>
-                                <td>Nguyễn Trung Dũng</td>
-                                <td>Nam</td>
-                                <td>31/4/1999</td>
-                                <td>03912323123</td>
-                                <td>tungdung123@gmail.com</td>
-                                <td>Giám đốc</td>
-                                <td>Phòng Nhân sự</td>
-                                <td class="align-item-money">17.000.000</td>
-                                <td>Đang thử việc</td>
-                            </tr>
-                            <tr>
-                                <td>MF930</td>
-                                <td>Nguyễn Trung Dũng</td>
-                                <td>Nam</td>
-                                <td>31/4/1999</td>
-                                <td>03912323123</td>
-                                <td>tungdung123@gmail.com</td>
-                                <td>Giám đốc</td>
-                                <td>Phòng Nhân sự</td>
-                                <td class="align-item-money">17.000.000</td>
-                                <td>Đang thử việc</td>
-                            </tr>
-                            <tr>
-                                <td>MF930</td>
-                                <td>Nguyễn Trung Dũng</td>
-                                <td>Nam</td>
-                                <td>31/4/1999</td>
-                                <td>03912323123</td>
-                                <td>tungdung123@gmail.com</td>
-                                <td>Giám đốc</td>
-                                <td>Phòng Nhân sự</td>
-                                <td class="align-item-money">17.000.000</td>
-                                <td>Đang thử việc</td>
-                            </tr>
-                            <tr>
-                                <td>MF930</td>
-                                <td>Nguyễn Trung Dũng</td>
-                                <td>Nam</td>
-                                <td>31/4/1999</td>
-                                <td>03912323123</td>
-                                <td>tungdung123@gmail.com</td>
-                                <td>Giám đốc</td>
-                                <td>Phòng Nhân sự</td>
-                                <td class="align-item-money">17.000.000</td>
-                                <td>Đang thử việc</td>
-                            </tr>
-
+                        <tbody id="listDataEmployee">
+                            
                         </tbody>
                     </table>
                 </div>
@@ -379,21 +168,21 @@
                             <div class="my-row">
                                 <div class="small-info">
                                     <p>Mã nhân viên (<span class="red-symbol">*</span>)</p>
-                                    <input type="text" class="border-input" value="NV000999" />
+                                    <input id="EmployeeCode" type="text" class="border-input " required value="" />
                                 </div>
                                 <div class="small-info">
                                     <p>Họ và tên (<span class="red-symbol">*</span>)</p>
-                                    <input type="text" class="border-input" value="Nguyễn Văn Mạnh" />
+                                    <input id="FullName" type="text" class="border-input " required value="" />
                                 </div>
                             </div>
                             <div class="my-row">
                                 <div class="small-info">
                                     <p>Ngày sinh</p>
-                                    <input class="calender border-input" type="date" value="11/01/1989" />
+                                    <input id="DateOfBirth" class="calender border-input" type="date" value="" />
                                 </div>
                                 <div class="small-info">
                                     <p>Giới tính</p>
-                                    <select name="" id="" class="border-input select-sex">
+                                    <select name="" id="gender" class="border-input select-sex" >
                                         <option value="">Nam</option>
                                         <option value="">Nữ</option>
                                         <option value="">...</option>
@@ -404,27 +193,27 @@
                             <div class="my-row">
                                 <div class="small-info">
                                     <p>Số CMND/Căn cước (<span class="red-symbol">*</span>)</p>
-                                    <input type="text" class="border-input" value="124141243" />
+                                    <input id="IdentityNumber" type="text" class="border-input " required value="" />
                                 </div>
                                 <div class="small-info">
                                     <p>Ngày cấp</p>
-                                    <input class="calender border-input" type="date" value="11/04/2011" />
+                                    <input class="calender border-input" type="date" value="" />
                                 </div>
                             </div>
                             <div class="my-row">
                                 <div class="small-info">
                                     <p>Nơi cấp</p>
-                                    <input type="text" class="border-input" value="Tỉnh Bắc Giang" />
+                                    <input id="IdentityPlace" type="text" class="border-input" value="" />
                                 </div>
                             </div>
                             <div class="my-row">
                                 <div class="small-info">
                                     <p>Email (<span class="red-symbol">*</span>)</p>
-                                    <input type="text" class="border-input" value="manhnv@gmail.com" />
+                                    <input id="Email" type="text" class="border-input " required value="" />
                                 </div>
                                 <div class="small-info">
                                     <p>Số điện thoại (<span class="red-symbol">*</span>)</p>
-                                    <input type="text" class="border-input" value="0987635421" />
+                                    <input id="PhoneNumber" type="text" class="border-input" value="" />
                                 </div>
                             </div>
                         </div>
@@ -437,7 +226,7 @@
                                 <div class="small-info">
                                     <p>Vị trí</p>
                                     <div class="dropdown">
-                                        <div class="dropdown-header-wrapper">
+                                        <div id="PositionName" class="dropdown-header-wrapper">
                                             <span class=" dropdown-value dropdown-value-3 "></span>
                                             <i class="fas fa-chevron-down icon-down show"></i>
                                             <i class="fas fa-chevron-up icon-up"></i>
@@ -447,7 +236,7 @@
                                 </div>
                                 <div class="small-info">
                                     <p>Phòng ban</p>
-                                    <div class="dropdown">
+                                    <div  class="dropdown">
                                         <div class="dropdown-header-wrapper">
                                             <span class=" dropdown-value dropdown-value-4 "></span>
                                             <i class="fas fa-chevron-down icon-down show"></i>
@@ -460,21 +249,21 @@
                             <div class="my-row">
                                 <div class="small-info">
                                     <p>Mã số thuế cá nhân</p>
-                                    <input type="text" class="border-input" value="3454643543" />
+                                    <input id="PersonalTaxCode" type="text" class="border-input" value="" />
                                 </div>
                                 <div class="small-info">
                                     <p>Mức lương cơ bản</p>
-                                    <input class="can-phai border-input" type="text" value="30.000.000" />
+                                    <input id="Salary" class="can-phai border-input" type="text" value="" />
                                 </div>
                             </div>
                             <div class="my-row">
                                 <div class="small-info">
                                     <p>Ngày gia nhập công ty</p>
-                                    <input class="calender border-input" type="text" value="12/05/2015" />
+                                    <input class="calender border-input" type="text" value="" />
                                 </div>
                                 <div class="small-info">
                                     <p>Tình trạng công việc</p>
-                                    <div class="dropdown">
+                                    <div id="WorkStatus" class="dropdown">
                                         <div class="dropdown-header-wrapper">
                                             <span class=" dropdown-value dropdown-value-5 "></span>
                                             <i class="fas fa-chevron-down icon-down show"></i>
@@ -490,7 +279,8 @@
     
                 <div class="dialog-footer">
                     <button class="btn-cancel"><b>Hủy</b></button>
-                    <button class="button button-icon btn-save">
+                    <button class="button " id="btn-delete">Xóa</button>
+                    <button class="button button-icon " id="btn-save">
                         <i class="fas fa-save"></i>
                         <p>Lưu</p>
                     </button>
@@ -500,7 +290,10 @@
         
 
     </div>
+    
+    <script src="../../Resource/lib/jquery-3.6.0.min.js"></script>
     <script src="../js/clickmaume.js"></script>
+    <script src="../js/handleTable.js"></script>
 </body>
 
 </html>
